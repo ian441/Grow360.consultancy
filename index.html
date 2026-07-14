@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GROW360 Consultancy — Where People and Potentials Grow</title>
+<meta name="description" content="Comprehensive assessments designed to unlock personal and organisational excellence. Evidence-based frameworks aligned with OECD, WHO, and WEF global standards."><link rel="preconnect" href="https://buy.stripe.com" crossorigin>
+<link rel="dns-prefetch" href="https://buy.stripe.com"><style>
+/* ═══════════════════════════════════════════════════════
+   GROW360 — OFFICIAL BRAND TOKENS v2.0
+   Source: Grow360 Comprehensive Brand Guidelines 2025
+   Colours: Pantone-matched HEX values. Typography: Georgia / Arial.
+   ═══════════════════════════════════════════════════════ */
+:root {
+  --deep-brown:   #272422;
+  --brown-mid:    #1E1C1A;
+  --brown-card:   #2E2A27;
+  --brown-border: #3A3531;
+  --gold:         #C8965A;
+  --gold-light:   #D4A96A;
+  --gold-dark:    #8B5E35;
+  --gold-glow:    rgba(200,150,90,0.13);
+  --gold-border:  rgba(200,150,90,0.28);
+  --white:        #FFFFFF;
+  --text-body:    rgba(255,255,255,0.60);
+  --text-muted:   rgba(255,255,255,0.36);
+  --text-dim:     rgba(255,255,255,0.18);
+  --serif: Georgia,'Times New Roman',serif;
+  --sans:  Georgia,'Times New Roman',serif;
+  --sp-xs:4px; --sp-s:8px; --sp-m:16px;
+  --sp-l:32px; --sp-xl:64px; --sp-2xl:96px;
+  --type-base: 17px;
+  --type-sm: 0.82rem;
+  --type-md: 1rem;
+  --type-lg: 1.08rem;
+  --line-base: 1.85;
+  --line-tight: 1.2;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--deep-brown);color:var(--white);font-family:var(--sans);font-size:var(--type-base);line-height:var(--line-base);overflow-x:hidden;-webkit-font-smoothing:antialiased;cursor:none;letter-spacing:0.01em}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+ul{list-style:none}
+
+/* CURSOR */
+.cursor{position:fixed;width:10px;height:10px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .18s,height .18s;mix-blend-mode:screen}
+.cursor-ring{position:fixed;width:34px;height:34px;border:1px solid var(--gold-border);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .22s,height .22s}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:0 var(--sp-xl);height:72px;background:rgba(39,36,34,0.96);border-bottom:1px solid var(--brown-border);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);transition:box-shadow .35s}
+.nav.scrolled{box-shadow:0 6px 40px rgba(0,0,0,.55)}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:5}
+.logo-img{height:64px;width:auto;max-width:180px;object-fit:contain}
+.nav-gmark{width:36px;height:36px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:bold;font-size:17px;color:var(--deep-brown);position:relative}
+.nav-gmark::after{content:'';position:absolute;inset:3px;border-radius:50%;border:1.5px solid rgba(39,36,34,.22)}
+.nav-wordmark{display:flex;flex-direction:column;line-height:1.1}
+.nav-brand-name{font-family:var(--serif);font-weight:bold;font-size:1.1rem;letter-spacing:.05em;color:var(--white)}
+.nav-brand-name b{color:var(--gold)}
+.nav-brand-sub{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--text-muted)}
+.nav-links{display:flex;gap:2.25rem}
+.nav-links a{font-size:.8rem;letter-spacing:.04em;color:var(--text-body);transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.btn-ghost-sm{font-size:.72rem;font-weight:bold;letter-spacing:.1em;text-transform:uppercase;padding:.48rem 1.25rem;border:1px solid var(--gold-border);color:var(--gold);background:transparent;transition:background .2s,border-color .2s}
+.btn-ghost-sm:hover{background:var(--gold-glow);border-color:var(--gold)}
+.btn-gold-sm{font-size:.72rem;font-weight:bold;letter-spacing:.1em;text-transform:uppercase;padding:.48rem 1.25rem;background:var(--gold);color:var(--deep-brown);border:1px solid var(--gold);transition:background .2s}
+.btn-gold-sm:hover{background:var(--gold-light)}
+.nav-burger{display:none;background:none;border:1px solid var(--brown-border);color:var(--white);padding:5px 10px;font-size:1rem;cursor:pointer}
+
+/* HERO */
+.hero{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:clamp(5rem,8vw,6.5rem) var(--sp-xl) 4rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent 0%,var(--gold-dark) 20%,var(--gold) 50%,var(--gold-dark) 80%,transparent 100%);z-index:2}
+.hero-ambient{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 65% 58% at 50% -2%,rgba(200,150,90,.16) 0%,transparent 62%),radial-gradient(ellipse 32% 32% at 86% 82%,rgba(200,150,90,.06) 0%,transparent 55%),radial-gradient(ellipse 28% 28% at 14% 70%,rgba(200,150,90,.04) 0%,transparent 52%)}
+.hero-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(200,150,90,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(200,150,90,.03) 1px,transparent 1px);background-size:52px 52px;mask-image:radial-gradient(ellipse 65% 50% at 50% 20%,black 20%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 65% 50% at 50% 20%,black 20%,transparent 75%)}
+.hero-content{position:relative;z-index:1;max-width:860px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.68rem;font-weight:bold;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem;opacity:0;animation:riseIn .9s .08s ease forwards}
+.eyebrow-dot{width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.eyebrow-dash{width:28px;height:1px;background:var(--gold-border)}
+.hero-h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4.2rem);font-weight:bold;line-height:1.02;letter-spacing:-.04em;color:var(--white);margin-bottom:1rem;opacity:0;animation:riseIn .9s .18s ease forwards}
+.hero-h1 em{font-style:italic;color:var(--gold)}
+.hero-tagline{font-family:var(--serif);font-size:1rem;font-style:italic;color:rgba(212,169,106,.8);margin-bottom:1rem;opacity:0;animation:riseIn .9s .28s ease forwards}
+.hero-sub{font-size:1rem;color:var(--text-body);max-width:560px;margin:0 auto 1.5rem;line-height:1.9;opacity:0;animation:riseIn .9s .36s ease forwards}
+.hero-btns{display:flex;gap:var(--sp-m);flex-wrap:wrap;justify-content:center;opacity:0;animation:riseIn .9s .44s ease forwards}
+.btn-hero-primary{font-size:.82rem;font-weight:bold;letter-spacing:.12em;text-transform:uppercase;padding:1rem 2.5rem;background:var(--gold);color:var(--deep-brown);border:1px solid var(--gold);display:inline-flex;align-items:center;gap:8px;transition:background .24s,transform .24s}
+.btn-hero-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-hero-outline{font-size:.82rem;font-weight:bold;letter-spacing:.12em;text-transform:uppercase;padding:1rem 2.5rem;background:transparent;color:var(--text-body);border:1px solid var(--brown-border);transition:border-color .24s,color .24s}
+.btn-hero-outline:hover{border-color:var(--gold-border);color:var(--gold-light)}
+.hero-proof{display:flex;justify-content:center;gap:clamp(1.5rem,4vw,3rem);margin-top:clamp(2rem,4vw,3rem);padding-top:1.5rem;border-top:1px solid var(--brown-border);position:relative;z-index:1;opacity:0;animation:riseIn .9s .54s ease forwards;flex-wrap:wrap}
+.proof-stat{text-align:center}
+.proof-num{font-family:var(--serif);font-size:2.2rem;font-weight:bold;color:var(--gold);line-height:1}
+.proof-label{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);margin-top:6px}
+
+/* MARQUEE */
+.ticker-wrap{border-top:1px solid var(--brown-border);border-bottom:1px solid var(--brown-border);background:var(--brown-mid);padding:.8rem 0;overflow:hidden}
+.ticker-track{display:flex;width:max-content;animation:ticker 42s linear infinite}
+.ticker-item{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;padding:0 1.5rem;display:flex;align-items:center}
+.ticker-sep{color:var(--gold);margin:0 .5rem;font-size:.4rem}
+
+/* LAYOUT */
+section{padding:clamp(3.5rem,5vw,5rem) var(--sp-xl)}
+.wrap{max-width:1100px;margin:0 auto}
+.wrap-wide{max-width:1260px;margin:0 auto}
+.section-kicker{display:flex;align-items:center;gap:10px;font-size:.68rem;font-weight:bold;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.section-kicker::before{content:'';width:20px;height:1px;background:var(--gold)}
+.section-h2{font-family:var(--serif);font-size:clamp(2rem,3vw,2.6rem);font-weight:bold;line-height:1.1;letter-spacing:-.03em;color:var(--white);margin-bottom:.85rem}
+.section-h2 em{font-style:italic;color:var(--gold)}
+.section-lead{font-size:1rem;color:var(--text-body);line-height:1.9;max-width:680px}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .78s ease,transform .78s ease}
+.rv.show{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
+
+/* ABOUT */
+.about{background:var(--deep-brown);padding-top:var(--sp-l)}
+.about-content-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-xl);margin-top:var(--sp-xl);align-items:start}
+.about-narrative{display:flex;flex-direction:column;gap:1rem}
+.about-lead{font-family:var(--serif);font-size:1.25rem;font-style:italic;color:var(--gold-light);line-height:1.65;margin-bottom:.5rem}
+.about-text{font-size:.96rem;color:var(--text-body);line-height:1.85}
+.about-pillars-simple{display:grid;grid-template-columns:1fr;gap:1.5rem}
+.impact-pillar{padding:1.5rem;background:linear-gradient(135deg,rgba(200,150,90,.06) 0%,rgba(200,150,90,.02) 100%);border:1px solid var(--gold-border);position:relative;transition:border-color .28s,transform .28s}
+.impact-pillar:hover{border-color:var(--gold);transform:translateX(4px)}
+.impact-number{display:inline-block;font-family:var(--serif);font-size:2rem;font-weight:bold;color:var(--gold);opacity:.3;margin-bottom:.5rem}
+.impact-pillar h3{font-size:.95rem;font-weight:bold;color:var(--white);margin-bottom:.5rem}
+.impact-pillar p{font-size:.84rem;color:var(--text-muted);line-height:1.6}
+.about-purpose{margin-top:var(--sp-xl);padding:var(--sp-l);background:var(--brown-card);border-left:3px solid var(--gold);font-size:.95rem;color:var(--text-body);line-height:1.85;text-align:center}
+.about-purpose strong{color:var(--gold-light)}
+
+/* UPDATED ABOUT SECTION */
+.about-hero-text{max-width:820px;display:flex;flex-direction:column;gap:1rem;margin:1.25rem auto 0}
+.about-hero-lead{font-family:var(--serif);font-size:1.2rem;font-style:italic;color:var(--gold-light);line-height:1.8;margin-bottom:0}
+.about-hero-desc{font-size:1rem;color:var(--text-body);line-height:1.9;margin:0}
+.about-hero-note{padding-top:1rem;border-top:1px solid var(--brown-border);color:var(--gold-light);font-style:italic}
+
+/* ASSESSMENTS */
+.assessments{background:var(--brown-mid);border-top:1px solid var(--brown-border);border-bottom:1px solid var(--brown-border)}
+.assess-header{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--sp-l);flex-wrap:wrap;margin-bottom:clamp(1.75rem,3vw,2.5rem)}
+.cards-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--sp-m);align-items:start}
+.acard{background:var(--deep-brown);border:1px solid var(--brown-border);border-radius:20px;padding:2.2rem;position:relative;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:border-color .3s,transform .3s}
+.acard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-light),transparent);opacity:0;transition:opacity .3s}
+.acard:hover::before{opacity:1}
+.acard:hover{border-color:var(--gold-border);transform:translateY(-2px)}
+.acard-num{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.85rem}
+.acard-badge{display:inline-block;font-size:.58rem;font-weight:bold;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-border);padding:4px 12px;background:var(--gold-glow);margin-bottom:.85rem}
+.acard-title{font-family:var(--serif);font-size:1.45rem;font-weight:bold;color:var(--white);margin-bottom:.75rem;line-height:1.2}
+.acard-desc{font-size:.94rem;color:var(--text-body);line-height:1.85;margin-bottom:1.25rem}
+.assessment-details{margin:0;padding:0;border:0}
+.assessment-details summary{list-style:none}
+.assessment-details summary::-webkit-details-marker{display:none}
+.details-toggle{font-size:.72rem;font-weight:bold;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-border);padding:.8rem 1rem;background:transparent;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;cursor:pointer;transition:background .2s,border-color .2s}
+.details-toggle::after{content:'+';font-size:1.1rem;line-height:.7;transition:transform .25s}
+.details-toggle:hover{background:var(--gold-glow);border-color:var(--gold)}
+.assessment-details[open] .details-toggle::after{transform:rotate(45deg)}
+.assessment-content{display:none;padding-top:var(--sp-l)}
+.assessment-details[open] .assessment-content{display:block}
+@media(hover:hover){.acard:hover .assessment-content{display:block}.acard:hover .assessment-details{padding-bottom:0}}
+.domains{display:flex;flex-direction:column;gap:10px;margin-bottom:var(--sp-l);padding-bottom:var(--sp-l);border-bottom:1px solid var(--brown-border);flex:1}
+.domain-row{display:flex;align-items:flex-start;gap:12px}
+.dn{font-family:var(--serif);font-size:.65rem;font-weight:bold;color:var(--gold);min-width:20px;padding-top:2px;opacity:.75;flex-shrink:0}
+.dt{font-size:.88rem;font-weight:bold;color:rgba(255,255,255,.82);margin-bottom:1px}
+.dd{font-size:.82rem;color:var(--text-muted);line-height:1.65}
+.btn-fill{font-size:.76rem;font-weight:bold;letter-spacing:.1em;text-transform:uppercase;padding:.9rem;background:var(--gold);color:var(--deep-brown);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;gap:8px;width:100%;transition:background .2s}
+.btn-fill:hover{background:var(--gold-light)}
+.btn-rim{font-size:.76rem;font-weight:bold;letter-spacing:.1em;text-transform:uppercase;padding:.9rem;background:transparent;color:var(--gold);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;gap:8px;width:100%;transition:background .2s,border-color .2s}
+.btn-rim:hover{background:var(--gold-glow);border-color:var(--gold)}
+
+/* HOW IT WORKS */
+.how{background:var(--deep-brown)}
+.process-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:var(--sp-xl)}
+.process-column{display:flex;flex-direction:column;gap:1.5rem}
+.process-step-box{background:var(--brown-card);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:1.35rem 1.5rem;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.process-step-box:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,.16)}
+.process-step-box::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));opacity:.8}
+.process-step-number{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:var(--gold);color:var(--deep-brown);font-family:var(--serif);font-size:.95rem;font-weight:bold;margin-bottom:1rem}
+.process-step-content h4{font-family:var(--serif);font-size:1rem;font-weight:bold;color:var(--white);margin-bottom:.55rem}
+.process-step-content p{font-size:.92rem;color:var(--text-body);line-height:1.8}
+
+@media(max-width:1024px){
+  .process-grid{grid-template-columns:1fr;gap:1.5rem}
+  .process-column{flex-direction:row;gap:1.5rem}
+}
+
+@media(max-width:768px){
+  .process-column{flex-direction:column;gap:1rem}
+  .process-step-box{padding:1.25rem}
+  .process-step-number{width:44px;height:44px;font-size:.9rem}
+  .process-step-content h4{font-size:.95rem}
+  .process-step-content p{font-size:.8rem}
+}
+
+/* BRAND VOICE */
+.voice{background:var(--brown-mid);border-top:1px solid var(--brown-border);border-bottom:1px solid var(--brown-border)}
+.voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--brown-border);border:1px solid var(--brown-border);margin-top:var(--sp-xl)}
+.voice-card{background:var(--brown-mid);padding:2rem var(--sp-l);transition:background .25s}
+.voice-card:hover{background:var(--brown-card)}
+.voice-num{font-family:var(--serif);font-size:2.2rem;font-weight:bold;color:rgba(200,150,90,.14);line-height:1;margin-bottom:5px}
+.voice-card h3{font-family:var(--serif);font-size:1rem;font-weight:bold;color:var(--gold-light);margin-bottom:7px}
+.voice-card p{font-size:.78rem;color:var(--text-muted);line-height:1.65}
+
+/* FOUNDER */
+.founder{background:var(--deep-brown)}
+.founder-grid{display:grid;grid-template-columns:1fr 2fr;gap:var(--sp-xl);align-items:center;margin-top:var(--sp-xl)}
+.founder-visual{background:var(--brown-card);border:1px solid var(--brown-border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--sp-m);aspect-ratio:3/4;padding:var(--sp-xl);position:relative;overflow:hidden}
+.founder-mono{width:80px;height:80px;border-radius:50%;background:var(--gold-glow);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.6rem;font-weight:bold;color:var(--gold)}
+.founder-visual-name{font-family:var(--serif);font-size:1rem;font-weight:bold;color:var(--white)}
+.founder-visual-role{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.founder-bar{position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dark),var(--gold),var(--gold-light))}
+.quote-mark{font-family:var(--serif);font-size:5rem;font-weight:bold;color:var(--gold-border);line-height:.5;display:block;margin-bottom:var(--sp-m)}
+.founder-quote{font-family:var(--serif);font-size:clamp(1.05rem,1.8vw,1.32rem);font-style:italic;color:rgba(255,255,255,.82);line-height:1.65;margin-bottom:var(--sp-l)}
+.founder-name{font-family:var(--serif);font-size:1.15rem;font-weight:bold;color:var(--white);margin-bottom:4px}
+.founder-role{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--sp-l)}
+.founder-stats{display:flex;gap:var(--sp-l);flex-wrap:wrap}
+.fstat-n{font-family:var(--serif);font-size:1.7rem;font-weight:bold;color:var(--gold);line-height:1}
+.fstat-l{font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin-top:3px}
+
+/* PRIVACY */
+.privacy{background:var(--brown-mid);border-top:1px solid var(--brown-border)}
+.privacy-content{display:flex;flex-direction:column;gap:1rem;max-width:850px;margin-top:var(--sp-xl)}
+.privacy-content p{font-size:.95rem;color:var(--text-body);line-height:1.95}
+.privacy-actions{margin-top:var(--sp-l)}
+.btn-agree{font-size:.88rem;font-weight:bold;letter-spacing:.1em;text-transform:uppercase;padding:1rem 1.8rem;background:var(--gold);color:var(--deep-brown);border:1px solid var(--gold);display:inline-flex;align-items:center;justify-content:center;gap:.5rem;transition:background .24s,transform .24s;cursor:pointer}
+.btn-agree:hover{background:var(--gold-light);transform:translateY(-1px)}
+.btn-agree[disabled]{background:rgba(200,150,90,.45);border-color:rgba(200,150,90,.45);cursor:not-allowed;transform:none}
+
+/* CTA */
+.cta-band{background:var(--gold);padding:var(--sp-2xl) var(--sp-xl);text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 50% 115%,rgba(39,36,34,.24),transparent);pointer-events:none}
+.cta-h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3.4rem);font-weight:bold;color:var(--deep-brown);margin-bottom:var(--sp-m);position:relative}
+.cta-p{font-size:.97rem;color:rgba(39,36,34,.58);max-width:450px;margin:0 auto var(--sp-l);line-height:1.75;position:relative}
+.btn-cta-dark{font-size:.84rem;font-weight:bold;letter-spacing:.1em;text-transform:uppercase;padding:1.05rem 3.25rem;background:var(--deep-brown);color:var(--gold);border:1px solid var(--deep-brown);display:inline-flex;align-items:center;gap:9px;position:relative;transition:background .24s,transform .24s}
+.btn-cta-dark:hover{background:var(--brown-card);transform:translateY(-2px)}
+.cta-footnote{font-family:var(--serif);font-size:.9rem;font-style:italic;color:rgba(39,36,34,.4);margin-top:var(--sp-m);display:block;position:relative}
+
+/* FOOTER */
+footer{background:var(--brown-mid);border-top:1px solid var(--brown-border);padding:var(--sp-xl)}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:var(--sp-xl);padding-bottom:var(--sp-l);border-bottom:1px solid var(--brown-border);margin-bottom:var(--sp-l)}
+.footer-logo-row{display:flex;align-items:center;gap:10px;margin-bottom:var(--sp-m)}
+.footer-logo-img{height:60px;width:auto;max-width:160px;object-fit:contain}
+.footer-gmark{width:32px;height:32px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:bold;font-size:14px;color:var(--deep-brown)}
+.footer-brand{font-family:var(--serif);font-weight:bold;font-size:1.05rem;color:var(--white)}
+.footer-brand b{color:var(--gold)}
+.footer-tagline{font-family:var(--serif);font-size:.85rem;font-style:italic;color:var(--text-muted);margin-bottom:var(--sp-m)}
+.footer-about{font-size:.76rem;color:var(--text-muted);line-height:1.75;max-width:270px}
+.footer-col-h{font-size:.6rem;font-weight:bold;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--sp-m)}
+.footer-list{display:flex;flex-direction:column;gap:9px}
+.footer-list a{font-size:.78rem;color:var(--text-muted);transition:color .2s}
+.footer-list a:hover{color:var(--gold)}
+.contact-row{display:flex;align-items:flex-start;gap:8px;font-size:.78rem;color:var(--text-muted);margin-bottom:9px;transition:color .2s}
+.contact-row:hover{color:var(--gold)}
+.ci{color:var(--gold);opacity:.6;font-size:.7rem;flex-shrink:0;padding-top:2px}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--sp-m)}
+.footer-copy{font-size:.68rem;color:var(--text-dim)}
+.socials{display:flex;gap:var(--sp-m)}
+.social-pill{font-size:.66rem;font-weight:bold;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);border:1px solid var(--brown-border);padding:5px 12px;transition:all .2s}
+.social-pill:hover{border-color:var(--gold-border);color:var(--gold)}
+.footer-legal{display:flex;gap:var(--sp-l)}
+.footer-legal a{font-size:.68rem;color:var(--text-dim);transition:color .2s}
+.footer-legal a:hover{color:var(--text-muted)}
+
+/* HIDDEN PRIVACY POLICY */
+.privacy-policy-hidden{background:var(--deep-brown);border-top:1px solid var(--brown-border);padding:var(--sp-xl) 0}
+.privacy-policy-title{font-family:var(--serif);font-size:2rem;font-weight:bold;color:var(--white);margin-bottom:var(--sp-l);text-align:center}
+.privacy-policy-content{max-width:800px;margin:0 auto;font-size:.95rem;color:var(--text-body);line-height:1.8}
+.privacy-policy-content p{margin-bottom:1.5rem}
+
+/* KEYFRAMES */
+@keyframes riseIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes slideDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes slideUp{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-20px)}}
+.toast-container{position:fixed;top:100px;left:50%;transform:translateX(-50%);z-index:10000;pointer-events:none}
+.toast{background:var(--brown-card);border:1px solid var(--gold-border);border-left:3px solid var(--gold);padding:1rem 1.5rem;border-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,.32);color:var(--text-body);font-size:.9rem;max-width:420px;display:flex;align-items:center;gap:12px;animation:slideDown .35s ease forwards;pointer-events:auto}
+.toast.dismiss{animation:slideUp .35s ease forwards}
+.toast-icon{color:var(--gold);font-size:1.1rem;flex-shrink:0;opacity:.8}
+
+/* RESPONSIVE — tablet */
+@media(max-width:1024px){
+  .nav{padding:0 var(--sp-l)}
+  section{padding:var(--sp-xl) var(--sp-l)}
+  footer{padding:var(--sp-xl) var(--sp-l)}
+  .footer-top{grid-template-columns:1fr 1fr;gap:var(--sp-l)}
+  .how-grid{grid-template-columns:1fr}
+  .score-card{position:static}
+}
+/* RESPONSIVE — mobile */
+@media(max-width:768px){
+  .nav{padding:0 var(--sp-m)}
+  .nav-links,.btn-ghost-sm{display:none}
+  .nav-burger{display:block}
+  section{padding:3.5rem var(--sp-m)}
+  .hero{padding:6rem var(--sp-m) 3rem}
+  .hero-proof{gap:var(--sp-l);flex-wrap:wrap;justify-content:center}
+  .about-grid{grid-template-columns:1fr;gap:var(--sp-l)}
+  .about-themes{grid-template-columns:1fr}
+  .mv-grid{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr 1fr}
+  .cards-grid{grid-template-columns:1fr}
+  .voice-grid{grid-template-columns:1fr 1fr}
+  .founder-grid{grid-template-columns:1fr}
+  .founder-visual{aspect-ratio:16/9}
+  .privacy-cards{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr;gap:var(--sp-l)}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+  .footer-legal{flex-wrap:wrap;gap:var(--sp-m)}
+  .cta-band{padding:3.5rem var(--sp-m)}
+  body{cursor:auto}
+  .cursor,.cursor-ring{display:none}
+}
+/* RESPONSIVE — small mobile */
+@media(max-width:480px){
+  .pillars,.voice-grid,.privacy-cards{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column;align-items:stretch}
+  .btn-hero-primary,.btn-hero-outline{justify-content:center}
+  .hero-proof{gap:1.5rem}
+  .assess-header{flex-direction:column;align-items:flex-start}
+  .privacy-policy-hidden{padding:var(--sp-l) 0}
+  .privacy-policy-title{font-size:1.5rem}
+  .privacy-policy-content{font-size:.9rem;padding:0 var(--sp-m)}
+}
+</style>
+</head>
+<body>
+
+<div class="cursor"      id="cursor"     aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- ══ NAVIGATION ════════════════════════════════════ -->
+<nav class="nav" id="mainNav" role="banner">
+  <a href="#home" class="nav-logo" aria-label="GROW360 Consultancy — Home">
+    <img src="images/Screenshot_2026-05-08_154728-removebg-preview.png" alt="GROW360 Logo" class="logo-img">
+  </a>
+  <ul class="nav-links" id="navLinks" role="navigation" aria-label="Primary navigation">
+    <li><a href="#about">About</a></li>
+    <li><a href="#assessments">Assessments</a></li>
+    <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#privacy">Privacy</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="nav-burger" id="burger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </div>
+</nav>
+
+<!-- ══ HERO ══════════════════════════════════════════ -->
+<section class="hero" id="home" aria-labelledby="hero-title">
+  <div class="hero-ambient" aria-hidden="true"></div>
+  <div class="hero-grid"    aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-dot" aria-hidden="true"></span>
+      <span class="eyebrow-dash" aria-hidden="true"></span>
+      Assessment &amp; Development Consultancy · UAE
+    </div>
+    <h1 class="hero-h1" id="hero-title">Grow<em>360</em></h1>
+    <p class="hero-tagline">"Where people and potentials grow."</p>
+    <p class="hero-sub">Built on evidence, grounded in global standards, and designed to move you forward with purpose.</p>
+    <div class="hero-btns">
+      <a href="#assessments" class="btn-hero-primary">Begin Your Assessment →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══════════════════════════════════════════ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <h2 class="section-h2 rv d1">About <em>GROW360</em></h2>
+    <div class="about-hero-text rv d2">
+      <p class="about-hero-lead">Growth is not a destination it is a journey worth understanding.</p>
+      <p class="about-hero-desc">At Grow360, we exist to illuminate that journey. For young people standing at the threshold of their future, we offer more than an assessment — we offer a mirror. A way to see their strengths, understand their story, and step forward with the clarity and confidence that transforms potential into purpose.</p>
+      <p class="about-hero-desc">For organisations navigating the complexity of today’s world, we go deeper than data. Grow360 Corporate brings leaders and their teams into alignment — connecting people to strategy, culture to ambition, and insight to action. Because great organisations are not built on structure alone. They are built on people who know where they are going and why.</p>
+      <p class="about-hero-desc">We design innovative, human-centred assessment solutions that do not simply measure — they inspire. They reveal what is possible. And they set in motion a process of growth that is both individual and collective, personal and organizational.</p>
+      <p class="about-hero-desc about-hero-note">UAE-rooted. Globally trusted. Built to grow what matters most — people.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ASSESSMENTS ════════════════════════════════════ -->
+<section class="assessments" id="assessments">
+  <div class="wrap-wide">
+    <div class="assess-header rv">
+      <div>
+        <div class="section-kicker">Assessments</div>
+      </div>
+    </div>
+    <div class="cards-grid">
+
+      <!-- Personal -->
+      <div class="acard rv d1">
+        <div class="acard-num">Assessment 01</div>
+        <h3 class="acard-title">360 - Personal Assessment</h3>
+        <p class="acard-desc">The GROW360 Core Readiness &amp; Personal-Professional Assessment Tool evaluates an individual's readiness across the dimensions that influence personal effectiveness, well-being, and professional success.</p>
+        <details class="assessment-details">
+          <summary class="details-toggle">View full assessment</summary>
+          <div class="assessment-content">
+        <p class="acard-desc">It examines technical and academic preparedness alongside emotional resilience, motivation, cognitive potential, and future-oriented skills. It is aligned with global benchmarks and UAE priorities for future readiness, employability, and digital transformation.</p>
+        <ul class="domains" aria-label="Personal assessment domains">
+          <li class="domain-row"><span class="dn">01</span><div><div class="dt">Educational Experience &amp; Market Readiness</div><div class="dd">Alignment between your education and real-world career demands</div></div></li>
+          <li class="domain-row"><span class="dn">02</span><div><div class="dt">Psychological &amp; Emotional Well-Being</div><div class="dd">Emotional resilience, stress management, and self-awareness</div></div></li>
+          <li class="domain-row"><span class="dn">03</span><div><div class="dt">Professional Growth &amp; Career Readiness</div><div class="dd">Career planning, adaptability, initiative, and networking</div></div></li>
+          <li class="domain-row"><span class="dn">04</span><div><div class="dt">Motivation &amp; Learning Engagement</div><div class="dd">Curiosity, persistence, goal-setting, and continuous learning</div></div></li>
+          <li class="domain-row"><span class="dn">05</span><div><div class="dt">Personal Strengths &amp; Life Balance</div><div class="dd">Self-awareness, well-being, and boundary-setting</div></div></li>
+          <li class="domain-row"><span class="dn">06</span><div><div class="dt">Giftedness &amp; Advanced Potential</div><div class="dd">Cognitive ability, creativity, and critical thinking</div></div></li>
+          <li class="domain-row"><span class="dn">07</span><div><div class="dt">Future Skills &amp; AI Readiness</div><div class="dd">Digital literacy, AI awareness, and future-oriented thinking</div></div></li>
+        </ul>
+        <a href="https://buy.stripe.com/test_5kQ6oH8kUaUl4vef7Uf3a07" target="_blank" rel="noopener noreferrer" class="btn-fill assess-btn" data-assessment="personal">Begin Personal Assessment →</a>
+          </div>
+        </details>
+      </div>
+
+      <!-- Corporate -->
+      <div class="acard rv d2">
+        <div class="acard-num">Assessment 02</div>
+        <h3 class="acard-title">360 - Corporate Assessment</h3>
+        <p class="acard-desc">The GROW360 Corporate Assessment measures and develops workforce capability across workplace effectiveness, leadership, innovation, and employee well-being.</p>
+        <details class="assessment-details">
+          <summary class="details-toggle">View full assessment</summary>
+          <div class="assessment-content">
+        <p class="acard-desc">It provides actionable insight into employee engagement, psychological safety, professional development, and organisational commitment, with domain-level scores, tailored feedback, and a clear development roadmap.</p>
+        <ul class="domains" aria-label="Corporate assessment domains">
+          <li class="domain-row"><span class="dn">01</span><div><div class="dt">Job Satisfaction &amp; Work Environment</div><div class="dd">Role clarity, workload balance, autonomy, and recognition</div></div></li>
+          <li class="domain-row"><span class="dn">02</span><div><div class="dt">Psychological Safety &amp; Emotional Well-Being</div><div class="dd">Trust, mental health support, respect, and inclusion</div></div></li>
+          <li class="domain-row"><span class="dn">03</span><div><div class="dt">Employee Engagement &amp; Motivation</div><div class="dd">Enthusiasm, purpose, commitment, and team connection</div></div></li>
+          <li class="domain-row"><span class="dn">04</span><div><div class="dt">Professional Development &amp; Career Readiness</div><div class="dd">Growth opportunities, skill-building, and career planning</div></div></li>
+          <li class="domain-row"><span class="dn">05</span><div><div class="dt">Work-Life Balance &amp; Well-Being</div><div class="dd">Boundary-setting, flexibility, and sustainable performance</div></div></li>
+          <li class="domain-row"><span class="dn">06</span><div><div class="dt">Organisational Commitment &amp; Loyalty</div><div class="dd">Alignment with company values and long-term engagement</div></div></li>
+          <li class="domain-row"><span class="dn">07</span><div><div class="dt">Communication &amp; Collaboration</div><div class="dd">Teamwork, information sharing, and cross-functional effectiveness</div></div></li>
+          <li class="domain-row"><span class="dn">08</span><div><div class="dt">Leadership Effectiveness</div><div class="dd">Managerial support, vision, trust, and decision-making</div></div></li>
+          <li class="domain-row"><span class="dn">09</span><div><div class="dt">Innovation &amp; Change Readiness</div><div class="dd">Adaptability, creativity, and openness to transformation</div></div></li>
+          <li class="domain-row"><span class="dn">10</span><div><div class="dt">Corporate Awareness &amp; Sustainability</div><div class="dd">ESG awareness, ethical practices, and social responsibility</div></div></li>
+        </ul>
+        <a href="https://buy.stripe.com/test_5kQcN5bx6e6x3ra6Bof3a06" target="_blank" rel="noopener noreferrer" class="btn-rim assess-btn" data-assessment="corporate">Begin Corporate Assessment →</a>
+          </div>
+        </details>
+      </div>
+
+      <div class="acard rv d3">
+        <div class="acard-num">Assessment 03</div>
+        <h3 class="acard-title">AIR360 &mdash; Individual Assessment</h3>
+        <p class="acard-desc">The AIR360 Individual AI Readiness Assessment measures an employee's readiness to use, collaborate with, and responsibly govern artificial intelligence in the workplace.</p>
+        <details class="assessment-details">
+          <summary class="details-toggle">View full assessment</summary>
+          <div class="assessment-content">
+            <p class="acard-desc">It examines technical AI literacy, governance judgment, ethical accountability, and adaptability to continuous AI-driven change. It is aligned with global AI governance benchmarks, the UAE AI Act 2026, and the country's AI-first workforce strategy.</p>
+            <ul class="domains" aria-label="AIR360 individual assessment domains">
+              <li class="domain-row"><span class="dn">01</span><div><div class="dt">AI Literacy</div><div class="dd">Understanding AI system types, capabilities, and limitations</div></div></li>
+              <li class="domain-row"><span class="dn">02</span><div><div class="dt">AI Productivity &amp; Collaboration</div><div class="dd">Effective and responsible use of AI tools to enhance work output</div></div></li>
+              <li class="domain-row"><span class="dn">03</span><div><div class="dt">Governance Judgment &amp; Oversight</div><div class="dd">Risk awareness, escalation, and sound decision-making around AI use</div></div></li>
+              <li class="domain-row"><span class="dn">04</span><div><div class="dt">Ethical Accountability</div><div class="dd">Fairness, transparency, and responsible ownership of AI-assisted outcomes</div></div></li>
+              <li class="domain-row"><span class="dn">05</span><div><div class="dt">Change Leadership &amp; AI Adoption</div><div class="dd">Championing adoption and guiding others through AI-driven change</div></div></li>
+              <li class="domain-row"><span class="dn">06</span><div><div class="dt">Adaptive Learning Rate</div><div class="dd">Speed and consistency of building new AI skills over time</div></div></li>
+            </ul>
+            <a href="https://buy.stripe.com/test_14A5kD8kU7I9gdW5xkf3a08" target="_blank" rel="noopener noreferrer" class="btn-fill assess-btn" data-assessment="air360-individual">Begin Personal Assessment &rarr;</a>
+          </div>
+        </details>
+      </div>
+
+      <div class="acard rv d4">
+        <div class="acard-num">Assessment 04</div>
+        <h3 class="acard-title">AIR360 &mdash; Organizational Assessment</h3>
+        <p class="acard-desc">The AIR360 Organizational AI Readiness Diagnostic evaluates an organization's capacity to govern, scale, and sustain the responsible use of artificial intelligence.</p>
+        <details class="assessment-details">
+          <summary class="details-toggle">View full assessment</summary>
+          <div class="assessment-content">
+            <p class="acard-desc">It assesses policy and governance structures, strategic alignment, learning culture, and risk and infrastructure readiness. It is aligned with global AI governance benchmarks, the UAE AI Act 2026, and the country's digital transformation agenda.</p>
+            <ul class="domains" aria-label="AIR360 organizational assessment domains">
+              <li class="domain-row"><span class="dn">01</span><div><div class="dt">AI Governance Maturity</div><div class="dd">Formal policies, accountability structures, and oversight of AI use</div></div></li>
+              <li class="domain-row"><span class="dn">02</span><div><div class="dt">Strategic AI Alignment</div><div class="dd">Integration of AI initiatives with business strategy and objectives</div></div></li>
+              <li class="domain-row"><span class="dn">03</span><div><div class="dt">Learning Ecosystem &amp; Culture</div><div class="dd">Organizational capability-building, training, and knowledge-sharing on AI</div></div></li>
+              <li class="domain-row"><span class="dn">04</span><div><div class="dt">Risk, Compliance &amp; Infrastructure</div><div class="dd">Technical, regulatory, and risk-management readiness for AI at scale</div></div></li>
+            </ul>
+            <a href="https://buy.stripe.com/test_fZu7sL7gQaUl8Lu8Jwf3a09" target="_blank" rel="noopener noreferrer" class="btn-fill assess-btn" data-assessment="air360-organizational">Begin Personal Assessment &rarr;</a>
+          </div>
+        </details>
+      </div>
+
+      <div class="acard rv d4">
+        <div class="acard-num">Assessment 05</div>
+        <h3 class="acard-title">Enhanced Internal Control Assessment</h3>
+        <p class="acard-desc">The Enhanced Internal Control Assessment Tool evaluates an organization's internal control environment across the five COSO Internal Control &ndash; Integrated Framework (2013) components.</p>
+        <details class="assessment-details">
+          <summary class="details-toggle">View full assessment</summary>
+          <div class="assessment-content">
+            <p class="acard-desc">It examines governance and culture, risk identification, control operating effectiveness, information systems, and ongoing monitoring. It is aligned with global benchmarks and UAE regulatory requirements, including Federal Law 11/1992, Law 7/2015, DFSA Standards, and ISO 31000.</p>
+            <ul class="domains" aria-label="Enhanced internal control assessment domains">
+              <li class="domain-row"><span class="dn">01</span><div><div class="dt">Control Environment &amp; Governance</div><div class="dd">Ethics, board oversight, structure, and competence of control personnel</div></div></li>
+              <li class="domain-row"><span class="dn">02</span><div><div class="dt">Risk Assessment &amp; Identification</div><div class="dd">Risk identification, fraud risk, compliance risk, and change management</div></div></li>
+              <li class="domain-row"><span class="dn">03</span><div><div class="dt">Control Activities &amp; Operating Effectiveness</div><div class="dd">Authorization, segregation of duties, and physical and access controls</div></div></li>
+              <li class="domain-row"><span class="dn">04</span><div><div class="dt">Information &amp; Communication Systems</div><div class="dd">Quality, flow, and use of information supporting internal control</div></div></li>
+              <li class="domain-row"><span class="dn">05</span><div><div class="dt">Monitoring Activities &amp; Evaluation</div><div class="dd">Ongoing and separate evaluations of control effectiveness over time</div></div></li>
+            </ul>
+            <a href="https://buy.stripe.com/test_14A5kD8kU7I9gdW5xkf3a08" target="_blank" rel="noopener noreferrer" class="btn-fill assess-btn" data-assessment="enhanced-internal-control">Begin Personal Assessment &rarr;</a>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ═══════════════════════════════════ -->
+<section class="how" id="how-it-works">
+  <div class="wrap">
+    <div class="section-kicker rv">The Process</div>
+    <h2 class="section-h2 rv d1">A confident path <br><em>from assessment to action</em></h2>
+    <p class="section-lead rv d2">GROW360 turns insight into progress with a refined, high-impact process designed for individuals and teams.</p>
+
+    <div class="process-grid rv d3">
+      <div class="process-column">
+        <article class="process-step-box">
+          <div class="process-step-number">01</div>
+          <div class="process-step-content">
+            <h4></h4>
+            <p>Choose the assessment that best fits your objective personal readiness or team capability growth.</p>
+          </div>
+        </article>
+        <article class="process-step-box">
+          <div class="process-step-number">02</div>
+          <div class="process-step-content">
+            <h4></h4>
+            <p>Pay in order to receive the assessment link.</p>
+          </div>
+        </article>
+        <article class="process-step-box">
+          <div class="process-step-number">03</div>
+          <div class="process-step-content">
+            <h4></h4>
+            <p>Use the link to open the assessment.</p>
+          </div>
+        </article>
+      </div>
+      <div class="process-column">
+        <article class="process-step-box">
+          <div class="process-step-number">04 </div>
+          <div class="process-step-content">
+            <h4></h4>
+            <p>Complete a focused assessment to reveal strengths, gaps, and opportunity zones.</p>
+          </div>
+        </article>
+        <article class="process-step-box">
+          <div class="process-step-number">05</div>
+          <div class="process-step-content">
+            <p>Follow a supported development pathway that strengthens teamwork, boosts capability, and sustains long-term success.</p>
+          </div>
+        </article>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRIVACY ════════════════════════════════════════ -->
+<section class="privacy" id="privacy">
+  <div class="wrap-wide">
+    <div class="section-kicker rv">Data Privacy &amp; Consent</div>
+    <p class="section-lead rv d2">By proceeding with any assessment, you acknowledge and agree to the data privacy and consent policies outlined below.</p>
+    <div class="privacy-content rv d3">
+      <p>
+   You confirm that you are at least 18 years old and voluntarily consent to participate.
+
+<br>Your responses will be used solely for AI readiness assessment, personality and behavioral insights, capability development, training, and organizational improvement purposes.</br>
+ <br>Your information will not be used for unrelated marketing activities.</br>
+
+GROW360 handles personal data in accordance with UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data.</br> 
+<br>All information is processed confidentially, securely stored, and retained only as necessary.
+
+Assessment results may be shared with your organization for development and planning purposes and may also be used in aggregated or anonymized reports.
+You agree to provide accurate responses and not misuse or manipulate the assessment.</br>
+ <br>All GROW360 content, frameworks, and methodologies remain the intellectual property of GROW360 and may not be copied or distributed without permission.</br>
+
+By continuing, you acknowledge that you have read, understood, and agreed to these Terms and Conditions.
+</p>
+      <div class="privacy-actions">
+        <button class="btn-agree" id="agreePrivacy" type="button">I Agree to the Privacy Terms</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA BAND ═══════════════════════════════════════ -->
+<section class="cta-band" aria-labelledby="cta-heading">
+  <h2 class="cta-h2" id="cta-heading">You are capable of more<br>than you know.</h2>
+  <p class="cta-p">Discover what you're truly capable of. Take the assessment today and receive your personalised growth roadmap.</p>
+  <a href="#assessments" class="btn-cta-dark">Start Your Assessment →</a>
+  <span class="cta-footnote">"Where people and potentials grow."</span>
+</section>
+
+<!-- ══ FOOTER ══════════════════════════════════════════ -->
+<footer id="contact">
+  <div class="wrap-wide">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo-row">
+          <img src="images/Screenshot_2026-05-08_154728-removebg-preview.png" alt="GROW360 Logo" class="footer-logo-img">
+          <span class="footer-brand">GROW<b>360</b> Consultancy</span>
+        </div>
+        <p class="footer-tagline">"Where people and potentials grow."</p>
+        <p class="footer-about">Empowering individuals and organisations to grow with clarity, purpose, and genuine self-awareness. Evidence-based. Human-centred. Forward-focused.</p>
+      </div>
+      <div>
+        <div class="footer-col-h">Assessments</div>
+        <ul class="footer-list">
+          <li><a href="#assessments">Personal Assessment</a></li>
+          <li><a href="#assessments">Corporate Assessment</a></li>
+          <li><a href="#privacy">Privacy &amp; Consent</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-h">Company</div>
+        <ul class="footer-list">
+          <li><a href="#about">About GROW360</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-h">Get in Touch</div>
+        <a href="mailto:amal@grow360consultancy.com" class="contact-row"><span class="ci" aria-hidden="true">✉</span> amal@grow360consultancy.com</a>
+        <a href="https://www.grow360consultancy.com" target="_blank" rel="noopener noreferrer" class="contact-row"><span class="ci" aria-hidden="true">🌐</span> www.grow360consultancy.com</a>
+        <div class="contact-row"><span class="ci" aria-hidden="true">📞</span> +971 · UAE</div>
+        <a href="https://www.linkedin.com/in/amalmheiri" target="_blank" rel="noopener noreferrer" class="contact-row"><span class="ci" aria-hidden="true">in</span> /in/amalmheiri</a>
+        <a href="https://www.instagram.com/grow360consultancy" target="_blank" rel="noopener noreferrer" class="contact-row"><span class="ci" aria-hidden="true">📷</span> @grow360consultancy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 GROW360 Consultancy · UAE · All rights reserved.</p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/amalmheiri" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://www.instagram.com/grow3.6.0?igsh=bTczM2kyNm1iODVx&utm_source=qr" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Instagram">Instagram</a>
+      </div>
+      <div class="footer-legal">
+        <a href="#privacy-policy-toggle">Privacy Policy</a>
+        <a href="#terms-of-use-toggle">Terms of Use</a>
+      </div>
+    </div>
+    <!-- Hidden Privacy Policy -->
+    <div id="privacy-policy" class="privacy-policy-hidden" style="display:none;">
+      <div class="wrap-wide">
+        <h2 class="privacy-policy-title">Data Privacy and Protection</h2>
+        <div class="privacy-policy-content">
+          <p>We collect and process personal data only for legitimate business purposes, including account management, customer support, payment processing, service delivery, security monitoring, and legal compliance.</p>
+          <p>Your personal information will not be sold or shared with unauthorized third parties. Any sharing with service providers or partners will occur only where necessary to provide our services or comply with UAE legal obligations.</p>
+          <p>By using this platform, you consent to the collection, processing, and storage of your personal data in accordance with the UAE Personal Data Protection Law (Federal Decree-Law No. 45 of 2021).</p>
+          <p>Users have the right to request access, correction, restriction, or deletion of their personal data, subject to applicable legal and regulatory requirements.</p>
+        </div>
+      </div>
+    </div>
+    <div id="terms-of-use" class="terms-of-use-hidden" style="display:none;">
+      <div class="wrap-wide">
+        <h2 class="privacy-policy-title">Terms of Use</h2>
+        <div class="privacy-policy-content">
+          <h3 style="color:var(--gold-light);margin-top:1.5rem;margin-bottom:0.8rem;font-size:1.05rem;">Acceptance of Terms</h3>
+          <p>By accessing or using this website, platform, or related services ("Services"), you agree to comply with and be legally bound by these Terms of Use. If you do not agree to these terms, you must discontinue use of the Services immediately.</p>          
+          <h3 style="color:var(--gold-light);margin-top:1.5rem;margin-bottom:0.8rem;font-size:1.05rem;">Eligibility</h3>
+          <p>The Services are strictly intended for individuals who are 18 years of age or older. By using the Services, you confirm that:</p>
+          <ul style="margin-left:1.5rem;margin-bottom:1rem;color:var(--text-body);">
+            <li>You are at least 18 years old;</li>
+            <li>You have the legal capacity to enter into binding agreements under applicable laws of the United Arab Emirates; and</li>
+            <li>All information provided by you is accurate and complete.</li>
+          </ul>          
+          <h3 style="color:var(--gold-light);margin-top:1.5rem;margin-bottom:0.8rem;font-size:1.05rem;">User Responsibilities</h3>
+          <p>Users agree not to:</p>
+          <ul style="margin-left:1.5rem;margin-bottom:1rem;color:var(--text-body);">
+            <li>Violate any applicable UAE laws or regulations;</li>
+            <li>Use the Services for fraudulent, harmful, abusive, or unlawful purposes;</li>
+            <li>Attempt unauthorized access to systems or accounts;</li>
+            <li>Upload malicious software, spam, or harmful content;</li>
+            <li>Misrepresent identity or provide false information.</li>
+          </ul>          
+          <h3 style="color:var(--gold-light);margin-top:1.5rem;margin-bottom:0.8rem;font-size:1.05rem;">Intellectual Property</h3>
+          <p>All website content, branding, graphics, text, software, and materials are the exclusive property of GROW360 Consultancy unless otherwise stated. Unauthorized copying, reproduction, distribution, or commercial use is prohibited without written consent.
+          
+          <h3 style="color:var(--gold-light);margin-top:1.5rem;margin-bottom:0.8rem;font-size:1.05rem;">Account Suspension or Termination</h3>
+          <p>We reserve the right to suspend, restrict, or terminate access to the Services at our discretion where:</p>
+          <ul style="margin-left:1.5rem;margin-bottom:1rem;color:var(--text-body);">
+            <li>A violation of these Terms occurs;</li>
+            <li>Fraudulent or suspicious activity is detected;</li>
+            <li>Required by law or regulatory authorities.</li>
+          </ul>
+          
+          <h3 style="color:var(--gold-light);margin-top:1.5rem;margin-bottom:0.8rem;font-size:1.05rem;">Limitation of Liability</h3>
+          <p>To the maximum extent permitted under UAE law, GROW360 Consultancy shall not be liable for indirect, incidental, consequential, or special damages arising from the use of the Services.
+          
+          <h3 style="color:var(--gold-light);margin-top:1.5rem;margin-bottom:0.8rem;font-size:1.05rem;">Privacy</h3>
+          <p>Use of the Services is also governed by our Privacy Policy and Data Consent provisions.
+          
+          <h3 style="color:var(--gold-light);margin-top:1.5rem;margin-bottom:0.8rem;font-size:1.05rem;">Modifications</h3>
+          <p>We may update or modify these Terms at any time. Continued use of the Services after updates constitutes acceptance of the revised Terms.
+          
+          <h3 style="color:var(--gold-light);margin-top:1.5rem;margin-bottom:0.8rem;font-size:1.05rem;">Governing Law</h3>
+          <p>These Terms shall be governed and interpreted in accordance with the laws of the United Arab Emirates. Any disputes arising in connection with these Terms shall be subject to the jurisdiction of the competent UAE courts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Custom cursor */
+(function(){
+  const c=document.getElementById('cursor'),r=document.getElementById('cursorRing');
+  if(!c||!r)return;
+  let mx=-100,my=-100,rx=-100,ry=-100;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+  (function loop(){
+    c.style.left=mx+'px';c.style.top=my+'px';
+    rx+=(mx-rx)*.13;ry+=(my-ry)*.13;
+    r.style.left=rx+'px';r.style.top=ry+'px';
+    requestAnimationFrame(loop);
+  })();
+  document.querySelectorAll('a,button').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{c.style.width='18px';c.style.height='18px';r.style.width='50px';r.style.height='50px';});
+    el.addEventListener('mouseleave',()=>{c.style.width='10px';c.style.height='10px';r.style.width='34px';r.style.height='34px';});
+  });
+})();
+
+/* Scroll reveal */
+(function(){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');obs.unobserve(e.target);}});
+  },{threshold:0.07,rootMargin:'0px 0px -24px 0px'});
+  document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+})();
+
+/* Animated score bars */
+(function(){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const t=e.target.dataset.w||'0%';
+        requestAnimationFrame(()=>setTimeout(()=>{e.target.style.width=t;},80));
+        obs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.5});
+  document.querySelectorAll('.score-fill').forEach(f=>obs.observe(f));
+})();
+
+/* Nav scroll shadow */
+(function(){
+  const nav=document.getElementById('mainNav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10),{passive:true});
+})();
+
+/* Mobile hamburger */
+(function(){
+  const btn=document.getElementById('burger');
+  const links=document.getElementById('navLinks');
+  if(!btn||!links)return;
+  let open=false;
+  const show=()=>{open=true;btn.setAttribute('aria-expanded','true');btn.textContent='✕';links.style.cssText='display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:rgba(39,36,34,0.98);border-bottom:1px solid #3A3531;padding:1.5rem;gap:1.5rem;z-index:450;backdrop-filter:blur(22px)';};
+  const hide=()=>{open=false;btn.setAttribute('aria-expanded','false');btn.textContent='☰';links.style.cssText='display:none';};
+  btn.addEventListener('click',()=>open?hide():show());
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ if(open) hide(); }));
+})();
+
+/* Toast notification system */
+(function(){
+  window.showToast=(message,icon,duration)=>{
+    let container=document.getElementById('toastContainer');
+    if(!container){container=document.createElement('div');container.id='toastContainer';container.className='toast-container';document.body.appendChild(container);}
+    const toast=document.createElement('div');
+    toast.className='toast';
+    toast.innerHTML='<span class="toast-icon">'+icon+'</span><span class="toast-message">'+message+'</span>';
+    container.appendChild(toast);
+    setTimeout(()=>{toast.classList.add('dismiss');setTimeout(()=>toast.remove(),350);},duration||4000);
+  };
+})();
+
+/* Privacy agree button & assessment restriction */
+(function(){
+  let privacyAgreed=false;
+  const agreeBtn=document.getElementById('agreePrivacy');
+  const assessBtns=document.querySelectorAll('.assess-btn');
+  
+  if(agreeBtn){
+    agreeBtn.addEventListener('click',()=>{
+      privacyAgreed=true;
+      agreeBtn.textContent='Privacy terms agreed';
+      agreeBtn.disabled=true;
+      agreeBtn.setAttribute('aria-pressed','true');
+    });
+  }
+  
+  assessBtns.forEach(btn=>{
+    btn.addEventListener('click',(e)=>{
+      if(!privacyAgreed){
+        e.preventDefault();
+        const showToast=window.showToast||((msg)=>alert(msg));
+        showToast('Please review and agree to our Privacy Terms before proceeding.','⚠',5000);
+        document.getElementById('privacy').scrollIntoView({behavior:'smooth'});
+        return false;
+      }
+    });
+  });
+})();
+
+/* Legal Documents Toggle */
+(function(){
+  const toggleDocument=(targetId,linkSelector)=>{
+    const link=document.querySelector(linkSelector);
+    if(link){
+      link.addEventListener('click',(e)=>{
+        e.preventDefault();
+        const section=document.getElementById(targetId);
+        if(section){
+          const isVisible=section.style.display!=='none';
+          section.style.display=isVisible?'none':'block';
+          if(!isVisible){
+            section.scrollIntoView({behavior:'smooth'});
+          }
+        }
+      });
+    }
+  };
+  toggleDocument('privacy-policy','.footer-legal a[href="#privacy-policy-toggle"]');
+  toggleDocument('terms-of-use','.footer-legal a[href="#terms-of-use-toggle"]');
+})();
+</script>
+</body>
+</html>
